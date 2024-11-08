@@ -1,0 +1,429 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+
+  header {
+    background-color: #FF7043; /* Dark background for contrast */
+    color: white;
+    padding: 10px 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Navigation Bar Styles */
+  nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center; /* Centers the nav items */
+    gap: 20px;
+  }
+  
+  nav ul li {
+    position: relative;
+  }
+  
+  nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 15px;
+    display: block;
+    transition: background-color 0.3s ease;
+  }
+  
+  nav ul li a:hover {
+    background-color: #555; /* Background change on hover */
+    border-radius: 5px;
+  }
+  
+  #home {
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(34, 34, 34, 0.8)),
+                url('https://images.unsplash.com/photo-1471039497385-b6d6ba609f9c?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8Q2l0eXNjYXBlJTIwb3IlMjBTa3lsaW5lfGVufDB8fDB8fHww') center/cover no-repeat; /* Gradient overlay + background image */
+    color: white;
+    padding: 80px 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 60vh;
+  }
+  
+  #home h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+  }
+  
+  #home p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+  }
+  
+  /* Button Styling */
+  button {
+    padding: 15px 30px;
+    background-color: #ff5722;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    font-size: 1em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #e64a19;
+    transform: scale(1.05);
+  }
+  
+  /* Responsive Hero Section */
+  @media (max-width: 768px) {
+    #home h1 {
+      font-size: 2em;
+    }
+  
+    #home p {
+      font-size: 1em;
+    }
+  
+    button {
+      padding: 12px 25px;
+      font-size: 0.9em;
+    }
+  }
+
+  #about {
+    padding: 60px 20px;
+    background-color: #f8f9fa;
+  }
+  
+  .about-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 1600px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+  }
+  
+  /* Image Styling */
+  .about-image img {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Text Section Styling */
+  .about-text {
+    max-width: 500px;
+    padding: 100px;
+    text-align: left;
+  }
+  
+  .about-text h2 {
+    font-size: 2em;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .about-text p {
+    font-size: 1.1em;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 20px;
+  }
+  
+  /* Button Styling */
+  .about-text button {
+    padding: 10px 20px;
+    background-color: ff5722;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .about-text button:hover {
+    background-color: ff5722;
+    transform: scale(1.05);
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .about-container {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .about-text {
+      padding: 0;
+    }
+  
+    .about-text h2 {
+      font-size: 1.8em;
+    }
+  
+    .about-text p {
+      font-size: 1em;
+    }
+  }
+  #services {
+    padding: 60px 20px;
+    background-color: #f4f4f4;
+    text-align: center;
+  }
+  
+  #services h2 {
+    font-size: 2em;
+    color: #333;
+    margin-bottom: 40px;
+  }
+  
+  /* Services Container */
+  .services-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  /* Service Item */
+  .service-item {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    flex: 1;
+    min-width: 250px;
+    max-width: 350px;
+    text-align: center;
+    transition: transform 0.3s ease;
+  }
+  
+  .service-item:hover {
+    transform: translateY(-5px);
+  }
+  
+  /* Icon Styling */
+  .service-icon {
+    font-size: 2.5em;
+    color: #007BFF;
+    margin-bottom: 15px;
+  }
+  
+  /* Service Title */
+  .service-item h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: #333;
+  }
+  
+  /* Service Description */
+  .service-item p {
+    font-size: 1em;
+    color: #666;
+    line-height: 1.6;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .services-container {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .service-item {
+      margin-bottom: 20px;
+      max-width: 100%;
+    }
+  }
+
+  #testimonials {
+    padding: 60px 20px;
+    background-color: #e9ecef;
+    text-align: center;
+  }
+  
+  #testimonials h2 {
+    font-size: 2em;
+    color: #333;
+    margin-bottom: 40px;
+  }
+  
+  /* Testimonials Container */
+  .testimonials-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  /* Testimonial Item */
+  .testimonial-item {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    flex: 1;
+    min-width: 250px;
+    max-width: 350px;
+    text-align: center;
+    transition: transform 0.3s ease;
+  }
+  
+  .testimonial-item:hover {
+    transform: translateY(-5px);
+  }
+  
+  /* Quote Styling */
+  .testimonial-item p {
+    font-size: 1.1em;
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    font-style: italic;
+  }
+  
+  /* Reviewer Name */
+  .testimonial-item h4 {
+    font-size: 1.2em;
+    color: #333;
+    margin-bottom: 5px;
+  }
+  
+  /* Reviewer Position */
+  .testimonial-item span {
+    font-size: 0.9em;
+    color: #777;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .testimonials-container {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .testimonial-item {
+      margin-bottom: 20px;
+      max-width: 100%;
+    }
+  }
+  #contact {
+    padding: 60px 20px;
+    background-color: #f9f9f9;
+    text-align: center;
+  }
+  
+  #contact h2 {
+    font-size: 2em;
+    color: #333;
+    margin-bottom: 30px;
+  }
+  
+  /* Contact Form Styling */
+  form {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Label Styling */
+  form label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 1em;
+    color: #333;
+    text-align: left;
+  }
+  
+  /* Input and Textarea Styling */
+  form input[type="text"],
+  form input[type="email"],
+  form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+    color: #333;
+    background-color: #f5f5f5;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease;
+  }
+  
+  form input[type="text"]:focus,
+  form input[type="email"]:focus,
+  form textarea:focus {
+    border-color: #007BFF;
+    background-color: #fff;
+    outline: none;
+  }
+  
+  /* Textarea Specific Styling */
+  form textarea {
+    resize: vertical;
+    min-height: 120px;
+  }
+  
+  /* Submit Button Styling */
+  form button[type="submit"] {
+    padding: 12px 20px;
+    background-color: #ff5722;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  form button[type="submit"]:hover {
+    background-color: #ff5722;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    form {
+      padding: 20px;
+    }
+  
+    form button[type="submit"] {
+      width: 100%;
+    }
+  }
+  
+  /* Media Queries for Responsiveness */
+  @media (max-width: 768px) {
+    nav ul li {
+      display: block;
+      text-align: center;
+      margin: 5px 0;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    #home, #about, #services, #testimonials, #contact {
+      padding: 10px;
+    }
+  
+    button {
+      width: 100%;
+    }
+  }
+  
